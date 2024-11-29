@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class AlbumRepository {
@@ -20,7 +21,9 @@ public class AlbumRepository {
             albums.add(album);
         }
     }
-
+    public Optional<Album> findAlbumById(Long albumId) {
+        return albums.stream().filter(a -> a.getId().equals(albumId)).findFirst();
+    }
     public List<Album> findAll() {
         return albums;
     }

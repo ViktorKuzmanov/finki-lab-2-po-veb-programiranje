@@ -4,6 +4,8 @@ import mk.ukim.finki.wp.lab.model.Album;
 import mk.ukim.finki.wp.lab.repository.AlbumRepository;
 import mk.ukim.finki.wp.lab.service.AlbumService;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -19,5 +21,9 @@ public class AlbumServiceImpl implements AlbumService {
     public List<Album> findAll() {
         return albumRepository.findAll();
     }
+    public Optional<Album> findById(Long albumId) {
+        return albumRepository.findAlbumById(albumId);
+    }
+
 }
 

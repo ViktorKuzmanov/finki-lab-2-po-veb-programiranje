@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,8 @@ public class Song {
     @ManyToOne
     private Album album;
 
-    public Song(String trackId, String title, String genre, int releaseYear,Album album) {
+    public Song(Long id, String trackId, String title, String genre, int releaseYear,Album album) {
+        this.id = id;
         this.trackId = trackId;
         this.title = title;
         this.genre = genre;

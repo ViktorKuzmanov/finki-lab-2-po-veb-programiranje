@@ -3,7 +3,7 @@ package mk.ukim.finki.wp.lab.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-// TODO: mozis da gi napisis manualno isto taka via metodite namesto da koristish @Data anotacija
+// learn: mozis da gi napisis manualno isto taka via metodite namesto da koristish @Data anotacija
 @Data
 @AllArgsConstructor
 public class Artist {

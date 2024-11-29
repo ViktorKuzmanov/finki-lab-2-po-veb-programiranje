@@ -28,7 +28,7 @@ public class ArtistRepository {
 
     public Optional<Artist> findById(Long id) {
         for(Artist a : artists) {
-            // TODO: Compare them the right way , we can't use == this is for reference comparison only
+            // learn: Compare them the right way , we can't use == this is for reference comparison only
             if(Objects.equals(a.getId(), id)) {
                 return Optional.of(a);
             }
