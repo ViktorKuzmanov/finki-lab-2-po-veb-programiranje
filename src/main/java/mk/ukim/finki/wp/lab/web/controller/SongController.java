@@ -47,9 +47,7 @@ public class SongController {
         if(a.isPresent()){
             album = a.get();
         }
-        Long novoId = (long)this.songService.listSongs().size() + 1;
-        System.out.println("v1 ==" + novoId);
-        this.songService.save(novoId, trackId, title, genre, releaseYear, album);
+        this.songService.save(trackId, title, genre, releaseYear, album);
         return "redirect:/songs";
     }
 

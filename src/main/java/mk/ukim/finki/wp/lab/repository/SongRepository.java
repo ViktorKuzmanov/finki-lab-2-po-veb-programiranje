@@ -24,7 +24,7 @@ public class SongRepository {
     @PostConstruct
     private void initializeData() {
         for (int i = 0; i < 5; i++) {
-            Song song = new Song((long)(i + 1), String.valueOf(i + 1), "ImeS" + i, "ZanrS" + i, i, albumRepository.findAll().get(i));
+            Song song = new Song(String.valueOf(i + 1), "ImeS" + i, "ZanrS" + i, i, albumRepository.findAll().get(i));
             songs.add(song);
 
         }
@@ -49,8 +49,8 @@ public class SongRepository {
         return artist;
     }
 
-    public Song save(Long id, String trackId, String title, String genre, Integer releaseYear, Album album){
-        Song song = new Song(id, trackId, title, genre, releaseYear, album);
+    public Song save(String trackId, String title, String genre, Integer releaseYear, Album album){
+        Song song = new Song(trackId, title, genre, releaseYear, album);
         songs.add(song);
         return song;
     }

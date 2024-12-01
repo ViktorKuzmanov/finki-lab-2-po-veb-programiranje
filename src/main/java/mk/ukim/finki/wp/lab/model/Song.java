@@ -26,8 +26,8 @@ public class Song {
     @ManyToOne
     private Album album;
 
-    public Song(Long id, String trackId, String title, String genre, int releaseYear,Album album) {
-        this.id = id;
+    public Song(String trackId, String title, String genre, int releaseYear,Album album) {
+        this.id = (long)(Math.random() * 10000);
         this.trackId = trackId;
         this.title = title;
         this.genre = genre;

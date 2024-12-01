@@ -33,8 +33,8 @@ public class SongServiceImpl implements SongService {
     }
 
     @Override
-    public Song save(Long id, String trackId, String title, String genre, Integer releaseYear, Album album) {
-        return songRepository.save(id, trackId, title, genre, releaseYear, album);
+    public Song save(String trackId, String title, String genre, Integer releaseYear, Album album) {
+        return songRepository.save(trackId, title, genre, releaseYear, album);
     }
     @Override
     public Song findById(Long Id) {
